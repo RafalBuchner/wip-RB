@@ -1,6 +1,7 @@
 
 // == vars == //
-yellow = #ffd300
+myColor = #E62739
+secondColor = #7EFFCC
 white = white
 black = black
 bar = 3px
@@ -16,7 +17,10 @@ nice_text() {
 // == GENERAL == //
 *, *:before, *:after
 	box-sizing border-box
-
+	
+*::selection {
+	background secondColor
+}
 html
 	font-size 16px
 
@@ -25,14 +29,18 @@ header
 	z-index 2001
 	background-color white
 	width 100vw
+div:focus
+	outline none !important
 
 p
 	color black
 
 h1
 	font-size 2rem
+// h2
+// 	color secondColor
 a
-	color yellow
+	color secondColor
 a:hover, a:focus
 	text-decoration none
 // == Welcome Page == //
@@ -72,7 +80,7 @@ a:hover, a:focus
 		a
 			color black
 		a:hover
-			color yellow					
+			color secondColor					
 	.rb-menu-el-title		
 		margin 12px 0	
 		nice_text()			
@@ -111,18 +119,51 @@ a:hover, a:focus
 	padding 114px 5px 5px 5px 
 	height 100vh
 	
+.blog
+	padding-bottom 10px
+	
 //layour-elements:
 .rb-img-grid
 	padding 5px
 .rb-line-text
 	color black
-	border-top bar_weight yellow
+	border-top bar_weight secondColor
+	// border-bottom bar_weight myColor
 	font-weight normal
-	
+
+	:first-child
+		margin-top 0.5em
 .rb-layout-element 
 	nice_text()
 	font-weight normal
 	// background-color gray //test
+// ===BLOG=== //
+.rb-row-line
+	padding 10px 0px
+	border-bottom bar_weight secondColor
+.rb-img-grid
+	position relative
+	.rb-link	
+		margin-top 0px
+		position relative
+		// bottom 0
+		// padding 5px 0
+		color black
+		:hover
+			color secondColor
+		h2
+			margin 0px
+// ===FONTS=== //	
+.rb-img-grid
+	.rb-link
+		font-size 2em	
+		:hover
+			color secondColor
+		
+
+			
+
+
 
 // === PORTFOLIO === //
 .rb-hidden-portfolio
@@ -171,15 +212,13 @@ a:hover, a:focus
 	.rb-img-blog img {
 		max-width 250%
 	}
+	
 }
 
 @media screen and ( max-width: 767px ) {
-	.rb-img-blog h2 {
-		bottom 0px
-	}
-	.rb-img-blog img {
-		max-width none
-		left -20%
+	// blog
+	.rb-img-grid .rb-link{
+		position relative
 	}
 }
 	

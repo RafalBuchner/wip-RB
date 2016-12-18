@@ -59,7 +59,7 @@
 				<a href="portfolio.html"><h2 class="rb-menu-el-title">Print</h2></a>
 			</div>
 			<div class="rb-element" role="Portfolio">
-				<a href="#"><h2 class="rb-menu-el-title">Fonts</h2></a>
+				<a href="fonts.html"><h2 class="rb-menu-el-title">Fonts</h2></a>
 			</div>		
 		</div>
 		</div>
@@ -345,14 +345,17 @@ $(document).ready(function(){
 			$(hash).slideToggle(100);
 
 
-			$('html, body').animate({
-					scrollTop: $("#rb-hidden-part").offset().top
-				}, 800, function(){
-
-					$('a').each(function(index, value){
-						if (this.hash != hash) {
-							$(this.hash).hide();
-						}
+			$('html, body').animate(
+					{
+						scrollTop: $("#rb-hidden-part").offset().top
+					}, 
+					800, 
+					"swing",
+					function(){
+						$('a').each(function(index, value){
+							if (this.hash != hash) {
+								$(this.hash).hide();
+							}
 					})
 					window.location.hash = hash;
 				});
@@ -363,9 +366,9 @@ $(window).scroll(function() {
     var scroll = $(this).scrollTop();
     
     if (scroll > 50) {
-        $('header').slideUp();
+        $('header').slideUp(350,"swing");
     }else {
-        $('header').slideDown();
+        $('header').slideDown(350,"swing");
     }  
 
 });

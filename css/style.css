@@ -3,6 +3,9 @@
 *:after {
   box-sizing: border-box;
 }
+*::selection {
+  background: #7effcc;
+}
 html {
   font-size: 16px;
 }
@@ -12,6 +15,9 @@ header {
   background-color: #fff;
   width: 100vw;
 }
+div:focus {
+  outline: none !important;
+}
 p {
   color: #000;
 }
@@ -19,7 +25,7 @@ h1 {
   font-size: 2rem;
 }
 a {
-  color: #ffd300;
+  color: #7effcc;
 }
 a:hover,
 a:focus {
@@ -51,7 +57,7 @@ float none {
   color: #000;
 }
 .rb-sub-menu .rb-element a:hover {
-  color: #ffd300;
+  color: #7effcc;
 }
 .rb-sub-menu .rb-menu-el-title {
   margin: 12px 0;
@@ -90,19 +96,49 @@ float none {
   padding: 114px 5px 5px 5px;
   height: 100vh;
 }
+.blog {
+  padding-bottom: 10px;
+}
 .rb-img-grid {
   padding: 5px;
 }
 .rb-line-text {
   color: #000;
-  border-top: 3px solid #ffd300;
+  border-top: 3px solid #7effcc;
   font-weight: normal;
+}
+.rb-line-text :first-child {
+  margin-top: 0.5em;
 }
 .rb-layout-element {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
+}
+.rb-row-line {
+  padding: 10px 0px;
+  border-bottom: 3px solid #7effcc;
+}
+.rb-img-grid {
+  position: relative;
+}
+.rb-img-grid .rb-link {
+  margin-top: 0px;
+  position: relative;
+  color: #000;
+}
+.rb-img-grid .rb-link :hover {
+  color: #7effcc;
+}
+.rb-img-grid .rb-link h2 {
+  margin: 0px;
+}
+.rb-img-grid .rb-link {
+  font-size: 2em;
+}
+.rb-img-grid .rb-link :hover {
+  color: #7effcc;
 }
 .rb-hidden-portfolio {
   margin-top: 10px;
@@ -147,11 +183,7 @@ float none {
   }
 }
 @media screen and (max-width: 767px) {
-  .rb-img-blog h2 {
-    bottom: 0px;
-  }
-  .rb-img-blog img {
-    max-width: none;
-    left: -20%;
+  .rb-img-grid .rb-link {
+    position: relative;
   }
 }
