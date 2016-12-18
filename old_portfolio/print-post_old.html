@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compa
+
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>RB's</title>
+	<style>
+		/*.rb-body {
+			margin: 0px;
+		}*/
+		/*header {
+			margin: 0;
+		}*/
+		.hello {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			margin: 0;
+		}
+		.hello > a {
+			color: black;
+		}
+		.overlap-div {
+			background-color: white;
+			z-index: 2400;
+			position: fixed;
+			height: 50px
+			width: 100vw;
+		}
+	</style>
+</head>
+<body>
+
+<header id="site-header">
+	<div class="container-fluid">
+		<div class="row">
+		<div class="rb-sub-menu	RB">	
+			<div class="rb-element RBoverlap overlap">
+				<h1 class="rb-menu-el-title">RB</h1>
+			</div>
+			<div class="rb-element" id="first_nav">
+				<a href="blog.html"><h1 class="rb-menu-el-title">Blog</h1></a>
+			</div>
+			<div class="rb-element">
+				<a href="print-post.html"><h1 class="rb-menu-el-title">About Me</h1></a>
+			</div>
+		</div>
+
+		<div class="rb-sub-menu Portfolio">
+			<div class="rb-element Portfoliooverlap overlap">
+				<h1 class="rb-menu-el-title">Portfolio</h1>
+			</div>
+			<div class="rb-element" role="Portfolio">
+				<a href="portfolio.html"><h1 class="rb-menu-el-title">Print</h1></a>
+			</div>
+			<div class="rb-element" role="Portfolio">
+				<a href="print-post.html"><h1 class="rb-menu-el-title">Fonts</h1></a>
+			</div>		
+		</div>
+		</div>
+	</div>
+</header>
+
+<div class="rb-body" style="overflow-y: none">
+<!-- <div class="overlap-div"><a href="about.html"> RB </a></div> -->
+<div class="container-fluid">
+	<div class="row rb-text-overlap">
+		<div class="col-sm-2">
+			<div  style="transform: translate(0, 60px);">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aperiam ex quasi molestiae, vitae quidem officia totam porro fuga temporibus nam architecto harum quia est ea, aliquam corrupti laudantium nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aperiam ex quasi molestiae, vitae quidem officia totam porro fuga temporibus nam architecto harum quia est ea, aliquam corrupti laudantium nobis.</p><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem aperiam ex quasi molestiae, vitae quidem officia totam porro fuga temporibus nam architecto harum quia est ea, aliquam corrupti laudantium nobis.</p>
+			</div>
+		</div>
+		<div class="col-sm-push-2 col-sm-1">
+			<p>2016</p>
+		</div>
+		<div class="col-sm-push-3 col-sm-2">
+			<p><strong>Stem Thickness</strong></p>
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="rb-slideshow">
+				<img src="img/Stem_Thickness.png" alt="Plugin" class="img-responsive">
+				<img src="img/Stem_Thickness.png" alt="Plugin" class="img-responsive">
+				<img src="img/Stem_Thickness.png" alt="Plugin" class="img-responsive">
+				<img src="img/Stem_Thickness.png" alt="Plugin" class="img-responsive">
+				<img src="img/Stem_Thickness.png" alt="Plugin" class="img-responsive">
+			</div>
+			<p class="hello"> <a href="portfolio.html">back</a> / scroll</p>
+		</div>	
+	</div>
+	
+</div><!-- container -->
+</div><!-- body -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

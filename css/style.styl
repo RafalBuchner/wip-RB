@@ -1,0 +1,189 @@
+
+// == vars == //
+yellow = #ffd300
+white = white
+black = black
+bar = 3px
+bar_weight = bar solid
+element_height = 33vh
+gutter = 30px
+// == func == //
+nice_text() {
+	text-rendering optimizeLegibility
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+}
+// == GENERAL == //
+*, *:before, *:after
+	box-sizing border-box
+
+html
+	font-size 16px
+
+header
+	position fixed
+	z-index 2001
+	background-color white
+	width 100vw
+
+p
+	color black
+
+h1
+	font-size 2rem
+a
+	color yellow
+a:hover, a:focus
+	text-decoration none
+// == Welcome Page == //
+.index
+	padding-top 15px !important
+#hello
+    position absolute
+    float none
+	padding 10px
+	border bar_weight black
+	text-align center
+	font-weight bold
+	nice_text()
+
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+	height: 95vh
+	display: flex;
+	align-items: center;     /* Align the flex-items vertically */
+	justify-content: center; /* Optional, to align inner flex-items 
+                              horizontally within the column  */
+}
+
+// == menu == //
+// .rb-rotate
+// 	position fixed
+// 	width 100vh
+// 	top 100%
+// 	-ms-transform rotate(-90deg)
+// 	-webkit-transform rotate(-90deg)
+// 	transform rotate(-90deg)
+// 	transform-origin top left
+
+.rb-sub-menu
+	.rb-element 
+		a
+			color black
+		a:hover
+			color yellow					
+	.rb-menu-el-title		
+		margin 12px 0	
+		nice_text()			
+		text-decoration none
+		:hover
+			text-decoration none
+
+.rb-element
+	display inline-block
+	padding 0 10px
+	
+.overlap 
+	color black
+	width 105vh
+	position absolute
+	background-color white
+	
+	z-index 1001
+	transition transform 1s cubic-bezier(0.5, 0, 0, 1.05)
+
+.RBoverlap{}
+.RBoverlaphover
+	transform: translate3d(306px, 0, 0)
+
+.Portfoliooverlap{}
+.Portfoliooverlaphover
+	transform: translate3d(248px, 0, 0)
+		
+#rb-bottom
+	background-color white
+	z-index 0	
+
+// === rb-body == //
+.rb-body
+	background-color white
+	padding 114px 5px 5px 5px 
+	height 100vh
+	
+//layour-elements:
+.rb-img-grid
+	padding 5px
+.rb-line-text
+	color black
+	border-top bar_weight yellow
+	font-weight normal
+	
+.rb-layout-element 
+	nice_text()
+	font-weight normal
+	// background-color gray //test
+
+// === PORTFOLIO === //
+.rb-hidden-portfolio
+	margin-top 10px
+		
+ // === MEDIA QUERIES === /*responsywność*/
+
+@media screen and ( max-width: 1024px ) {
+	body {
+		background-color white
+	}
+
+	.rb-rotate {
+		margin-left 12px
+		margin-right 12px
+		position initial
+		width initial
+		top 100%
+		-ms-transform initial
+		-webkit-transform initial
+		transform initial
+		transform-origin initial
+	}
+	.rb-sub-menu {
+		display inline-block
+		border-left none
+		border-top none
+		border-bottom none
+		margin-top 2px
+	}
+	.rb-sub-menu .rb-element {
+		border-left none
+		border-bottom none
+	}
+	
+	.rb-menu-el-title {
+		font-size 20px
+	}
+	.overlap {
+		display: none
+		
+	}
+	.rb-body {
+		padding-top 48px
+	}
+	.rb-img-blog img {
+		max-width 250%
+	}
+}
+
+@media screen and ( max-width: 767px ) {
+	.rb-img-blog h2 {
+		bottom 0px
+	}
+	.rb-img-blog img {
+		max-width none
+		left -20%
+	}
+}
+	
+
+
+
+	
