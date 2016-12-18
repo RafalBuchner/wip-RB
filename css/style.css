@@ -76,10 +76,10 @@ float none {
   transition: transform 1s cubic-bezier(0.5, 0, 0, 1.05);
 }
 .RBoverlaphover {
-  transform: translate3d(306px, 0, 0);
+  transform: translate3d(248px, 0, 0);
 }
 .Portfoliooverlaphover {
-  transform: translate3d(248px, 0, 0);
+  transform: translate3d(196px, 0, 0);
 }
 #rb-bottom {
   background-color: #fff;
